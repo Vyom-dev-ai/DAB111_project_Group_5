@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}About | College Project{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script href="{{ url_for('static', filename='script.js') }}"></script>
+  <style>
+/* About Content Section */
+.about-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 30px;
+}
+
+.about-content h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-content ul {
+  padding: 0;
+  list-style: none;
+}
+
+.about-content ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.about-content a {
+  color: #16a085;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-content a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='st-clair-logo.png') }}" alt="College Project Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        &#9776;
+      </div>
+      <ul id="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('data') }}">Data</a></li>
+        <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>About the Cricket Dataset</h1>
+      <p>The Asian Cricket Council Asia Cup is a men's One Day International and Twenty20 International cricket tournament. It was established in 1983 when the Asian Cricket Council was founded as a measure to promote goodwill between Asian countries. It was originally scheduled to be held every two years. The Asia Cup is the only continental championship in cricket and the winning team becomes the champions of Asia. It alternates every 2 years between ODI and T20I formats.</p><br>
+      <p>The first Asia cup was held in 1984 in Sharjah in the United Arab Emirates where the council's offices were based (until 1995). India boycotted the 1986 tournament due to strained cricketing relations with Sri Lanka. Pakistan boycotted the 1990–91 tournament due to strained political relations with India and the 1993 tournament was cancelled for the same reason. The ACC announced that the tournament would be held biennially from 2009 onwards. The ICC has ruled that all games played in the Asia Cup have official ODI status.</p><br>
+      <p>After downsizing the Asian Cricket Council in 2015, it was announced by the ICC that Asia Cup events from 2016 would be played on a rotation basis between One Day International and Twenty20 International format, on the basis of the format of upcoming world events. As a result, the 2016 event was the first event played in the T20I format and functioned as a preparatory tournament ahead of the 2016 ICC World Twenty20.</p><br>
+    </section><br><br>
+  
+    <section class="about-content">
+      <h2>AsiaCup</h2><br>
+      <ul>
+        <li><strong>Team:</strong> One team of the match</li>
+        <li><strong>Opponent:</strong> Other team of the match</li>
+        <li><strong>Format:</strong> Format of the tournament</li>
+        <li><strong>Ground:</strong> Match venue</li>
+        <li><strong>Year:</strong> Tournament Year</li>
+        <li><strong>Toss:</strong> Win/Lose the toss</li>
+        <li><strong>Selection:</strong> Selection after winning/losing toss</li>
+        <li><strong>Run Scored:</strong> Total runs scored</li>
+        <li><strong>Wicket Lost:</strong> Total wickets lost</li>
+        <li><strong>Fours:</strong> Total scored fours</li>
+        <li><strong>Sixes:</strong> Total scored sixes</li>
+        <li><strong>Extras:</strong> Total extras given by the opponent team</li>
+        <li><strong>Run Rate:</strong> Batting innings run rate</li>
+        <li><strong>Avg Bat Strike Rate:</strong> Average batting strike rate</li>
+        <li><strong>Highest Score:</strong> Highest individual run scored</li>
+        <li><strong>Wicket Taken:</strong> Opponent team's total wickets taken</li>
+        <li><strong>Given Extras:</strong> Extras given to opponent team</li>
+        <li><strong>Highest Individual Wicket:</strong> Highest individual wickets taken of opponent team</li>
+        <li><strong>Player Of The Match:</strong> Player of the match for good performance</li>
+        <li><strong>Result:</strong> Winning/Losing the match</li>
+      </ul><br>
+  
+      <h2>Acknowledgement</h2><br>
+      <p>Almost all the stats are collected from ESPNcricinfo and Wikipedia.</p>
+
+    </section>
+  </main><br><br>
+  
+
+  <footer>
+    <p>&copy; 2024 St Clair College (DAB111 Project - Section 2, Group No 5). All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>Home - College Project</title> -->
+  <title>{% block title %}Home | College Project{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script href="{{ url_for('static', filename='script.js') }}"></script>
+  <style>
+    /* About Content Section */
+    .about-content {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 30px;
+    }
+
+    .about-content h2 {
+      color: #2c3e50;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .about-content ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .about-content ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .about-content a {
+      color: #16a085;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .about-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="{{ url_for('static', filename='st-clair-logo.png') }}" alt="College Project Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+      </div>
+      <div class="hamburger" id="hamburger">
+        &#9776;
+      </div>
+      <ul id="nav-links">
+        <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+        <li><a href="{{ url_for('data') }}">Data</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to the Cricket Match Data</h1>
+      <p>This project is part of the project for course <b>Data Analytics for Business - DAB111</b> and was developed by students from St Clair College, Windsor.
+        <br>We're from <b>Section 2, Group No 5</b>. It focuses on the collection, processing, and presentation of cricket match data using Python, SQLite, and Flask.</p>
+      <p>It presents data about various Asia Cup cricket matches, analyzing the performance of teams, players, and their statistics.</p>
+    </section><br><br>
+
+    <section class="about-content">
+      <h2>AsiaCup</h2><br>
+      <ul>
+        <li><strong>Team:</strong> One team of the match</li>
+        <li><strong>Opponent:</strong> Other team of the match</li>
+        <li><strong>Format:</strong> Format of the tournament</li>
+        <li><strong>Ground:</strong> Match venue</li>
+        <li><strong>Year:</strong> Tournament Year</li>
+        <li><strong>Toss:</strong> Win/Lose the toss</li>
+        <li><strong>Selection:</strong> Selection after winning/losing toss</li>
+        <li><strong>Run Scored:</strong> Total runs scored</li>
+        <li><strong>Wicket Lost:</strong> Total wickets lost</li>
+        <li><strong>Fours:</strong> Total scored fours</li>
+        <li><strong>Sixes:</strong> Total scored sixes</li>
+        <li><strong>Extras:</strong> Total extras given by the opponent team</li>
+        <li><strong>Run Rate:</strong> Batting innings run rate</li>
+        <li><strong>Avg Bat Strike Rate:</strong> Average batting strike rate</li>
+        <li><strong>Highest Score:</strong> Highest individual run scored</li>
+        <li><strong>Wicket Taken:</strong> Opponent team's total wickets taken</li>
+        <li><strong>Given Extras:</strong> Extras given to opponent team</li>
+        <li><strong>Highest Individual Wicket:</strong> Highest individual wickets taken of opponent team</li>
+        <li><strong>Player Of The Match:</strong> Player of the match for good performance</li>
+        <li><strong>Result:</strong> Winning/Losing the match</li>
+      </ul><br>
+  
+      <h2>Acknowledgement</h2><br>
+      <p>Almost all the stats are collected from ESPNcricinfo and Wikipedia.</p><br><br>
+
+      <h3>This project is developed by</h3><br>
+      <p>Pankaj, Vaibhav, Shivam, Nene and Joy</p>
+
+    </section>
+  </main><br><br>
+
+  <footer>
+    <p>&copy; 2024 St Clair College (DAB111 Project - Section 2, Group No 5). All rights reserved.</p>
+  </footer>
+</body>
+</html>

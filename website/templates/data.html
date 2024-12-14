@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Data | College Project{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script href="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='st-clair-logo.png') }}" alt="College Project Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        &#9776;
+      </div>
+      <ul id="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('data') }}" class="active">Data</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Data Table</h1>
+      <p>The Asian Cricket Council Asia Cup is a men's One Day International and Twenty20 International cricket tournament. It was established in 1983 when the Asian Cricket Council was founded as a measure to promote goodwill between Asian countries. It was originally scheduled to be held every two years. The Asia Cup is the only continental championship in cricket and the winning team becomes the champions of Asia. It alternates every 2 years between ODI and T20I formats.</p>
+    </section>
+
+    <section class="data-table">
+      <div class="table-container" style="padding: 0 20px;">
+        <table>
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Opponent</th>
+              <th>Format</th>
+              <th>Ground</th>
+              <th>Year</th>
+              <th>Toss</th>
+              <th>Selection</th>
+              <th>Run Scored</th>
+              <th>Wicket Lost</th>
+              <th>Fours</th>
+              <th>Sixes</th>
+              <th>Extras</th>
+              <th>Run Rate</th>
+              <th>Avg Bat Strike Rate</th>
+              <th>Highest Score</th>
+              <th>Wicket Taken</th>
+              <th>Given Extras</th>
+              <th>Highest Individual Wicket</th>
+              <th>Player Of The Match</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in rows %}
+              <tr>
+                {% for col in row %}
+                  <td>{{ col }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main><br><br>
+
+  <footer>
+    <p>&copy; 2024 St Clair College (DAB111 Project - Section 2, Group No 5). All rights reserved.</p>
+  </footer>
+</body>
+</html>
